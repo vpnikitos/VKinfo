@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">VKinfo</string>
+    <string name="id">id</string>
+    <string name="result">result</string>
+    <string name="search">search</string>
+    <string name="search_id">search id!</string>
+</resources>
