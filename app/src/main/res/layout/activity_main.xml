@@ -15,7 +15,7 @@
 
         <EditText
             android:id="@+id/et_search_field"
-            android:layout_width="314dp"
+            android:layout_width="418dp"
             android:layout_height="wrap_content"
             android:hint="@string/id"
             android:inputType="text"
@@ -33,7 +33,7 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button1"
+        android:id="@+id/b_search_vk"
         style="@style/Widget.Material3.Button.OutlinedButton"
         app_layout_constraintEnd_toEndOf="parent"
         app_layout_constraintStart_toStartOf="parent"
@@ -49,9 +49,7 @@
         android:textColorHint="#FFFFFF"
         android:textColorLink="#FFFEFE"
         android:textSize="22dp"
-        app:cornerRadius="35dp"
-
-    />
+        app:cornerRadius="35dp" />
 
 
 
