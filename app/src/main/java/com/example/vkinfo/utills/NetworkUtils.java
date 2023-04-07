@@ -24,7 +24,7 @@ public class NetworkUtils {
                 .appendQueryParameter(PARAM_USERS_ID,userId)
                 .appendQueryParameter(PARAM_VERSION, "8.24")
                 .appendQueryParameter(ACCES_TOKEN,
-                        "40d1bd2f40d1bd2f40d1bd2f1643c2bdd9440d140d1bd2f24da9ec2b8841c0bb30ca636")
+                        "969c0852969c0852969c0852a1958f08a49969c969c0852f2ac078fce3d4b148fcae5e4")
                 .build();
 
         URL url = null;

@@ -12,6 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.net.URL;
 
@@ -36,7 +40,20 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String response){
-            result.setText(response);
+            String firstName = null;
+            String lastName = null;
+            try {
+                JSONObject jsonResponse = new JSONObject(response);
+                JSONArray jsonArray = jsonResponse.getJSONArray("response");
+                JSONObject userInfo = jsonArray.getJSONObject(0);
+                firstName = userInfo.getString("firstname");
+                lastName = userInfo.getString("lastname");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            String resultingString = "Имя: " + firstName + "\n" + "Фамилия: " + lastName;
+            result.setText(resultingString);
         }
     }
 
