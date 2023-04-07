@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(URL... urls) {
             String response = null;
+
             try {
                 response = getResponseFromURL(urls[0]);
             } catch (IOException e) {
