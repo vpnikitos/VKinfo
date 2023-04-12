@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 response = getResponseFromURL(urls[0]);
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
             return response;
 
@@ -40,19 +40,20 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String response){
-            String firstName = null;
-            String lastName = null;
+            String first_Name = null;
+            String last_Name = null;
             try {
                 JSONObject jsonResponse = new JSONObject(response);
                 JSONArray jsonArray = jsonResponse.getJSONArray("response");
                 JSONObject userInfo = jsonArray.getJSONObject(0);
-                firstName = userInfo.getString("firstname");
-                lastName = userInfo.getString("lastname");
+
+                first_Name = userInfo.getString("first_name");
+                last_Name = userInfo.getString("last_name");
 
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            String resultingString = "Имя: " + firstName + "\n" + "Фамилия: " + lastName;
+            String resultingString = "Имя: " + first_Name + "\n" + "Фамилия: " + last_Name;
             result.setText(resultingString);
         }
     }
